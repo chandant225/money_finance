@@ -19,7 +19,7 @@ class PageController extends Controller
      }
 
     public function servicePage() {
-         $services = Service::all();
+         $services = Service::where('category','service')->get();
          return view('client.service')->with(['services'=>$services]);
     }
 
