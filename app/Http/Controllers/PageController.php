@@ -24,7 +24,7 @@ class PageController extends Controller
     }
 
     public function serviceDetails($slug){
-        $services = Service::all();
+        $services = Service::where('category','service')->get();
         $service = Service::where('slug',$slug)->first();
         return view('client.detail',compact('service','services'));
     }
