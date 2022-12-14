@@ -27,6 +27,7 @@
                                         <th>title</th>
                                         <th>category</th>
                                         <th>status</th>
+                                        <th>list in menu</th>
                                         <th>image</th>
                                         <th>action</th>
                                     </tr>
@@ -38,6 +39,7 @@
                                             <td>{{ $service->title }}</td>
                                             <td>{{ $service->category }}</td>
                                             <td>{{ $service->status }}</td>
+                                            <td>{{ $service->menu_list }}</td>
                                             <td><img src="{{ env('APP_URL') . 'uploads/service/' . $service->filename }}"
                                                     alt="{{ $service->title }}" class="w-25 img-responsive" />
                                             </td>
@@ -57,9 +59,9 @@
                                     </tbody>
 
                                     <!-- Modal -->
-                                    <div class="modal fade" id="staticBackdrop{{ $loop->iteration }}" data-backdrop="static"
-                                        data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
-                                        aria-hidden="true">
+                                    <div class="modal fade" id="staticBackdrop{{ $loop->iteration }}"
+                                        data-backdrop="static" data-keyboard="false" tabindex="-1"
+                                        aria-labelledby="staticBackdropLabel" aria-hidden="true">
                                         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                                             <div class="modal-content">
                                                 <div class="modal-header">

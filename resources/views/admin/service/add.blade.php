@@ -76,6 +76,18 @@
                                 @enderror
                             </span>
                         </div>
+                        <div class="form-group">
+                            <label for="menu_list">Link to menu</label>
+                            <select name="menu_list" id="" class="form-control">
+                                <option value="false">Not required</option>
+                                <option value="true">link to menu</option>
+                            </select>
+                            <span class="text-danger">
+                                @error('menu_list')
+                                    {{ $message }}
+                                @enderror
+                            </span>
+                        </div>
                     </div>
 
                     <!-- /.card-body -->

@@ -42,7 +42,8 @@ class ServiceController extends Controller
             'title'=> 'required',
             'description'=> 'required',
             'category'=> 'required',
-            'status'=>'required'
+            'status'=>'required',
+            'menu_list'=>'required',
         ]);
 
         $slug = Str::slug($request->title,'-');
@@ -56,6 +57,7 @@ class ServiceController extends Controller
             $service->category = $request->category;
             $service->description = $request->description;
             $service->status = $request->status;
+            $service->menu_list = $request->menu_list;
             $service->filename = $name;
             $save_service = $service->save();
             if($save_service){
@@ -103,12 +105,12 @@ class ServiceController extends Controller
      */
     public function update(Request $request, $id)
     {
-        
         $request->validate([
             'title'=> 'required',
             'description'=> 'required',
             'category'=> 'required',
-            'status'=>'required'
+            'status'=>'required',
+            'menu_list'=>'required',
         ]);
 
         $slug = Str::slug($request->title,'-');
@@ -125,6 +127,7 @@ class ServiceController extends Controller
             $service->category = $request->category;
             $service->description = $request->description;
             $service->status = $request->status;
+            $service->menu_list = $request->menu_list;
             $service->filename = $name;
             $save_service = $service->save();
             if($save_service){
@@ -141,6 +144,7 @@ class ServiceController extends Controller
             $service->description = $request->description;
             $service->filename = $filename;
             $service->status = $request->status;
+            $service->menu_list = $request->menu_list;
             $save_service = $service->save();
             if($save_service){
                 return redirect()->route('admin.service.list')->with('success','service has been updated successfully.');
