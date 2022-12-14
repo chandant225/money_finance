@@ -25,7 +25,8 @@
                                     <tr>
                                         <th>ID</th>
                                         <th>title</th>
-                                        <th>slug</th>
+                                        <th>category</th>
+                                        <th>status</th>
                                         <th>image</th>
                                         <th>action</th>
                                     </tr>
@@ -35,7 +36,8 @@
                                         <tr>
                                             <td>{{ $service->id }}</td>
                                             <td>{{ $service->title }}</td>
-                                            <td>{{ $service->slug }}</td>
+                                            <td>{{ $service->category }}</td>
+                                            <td>{{ $service->status }}</td>
                                             <td><img src="{{ env('APP_URL') . 'uploads/service/' . $service->filename }}"
                                                     alt="{{ $service->title }}" class="w-25 img-responsive" />
                                             </td>

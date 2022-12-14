@@ -40,7 +40,9 @@ class ServiceController extends Controller
     {
         $request->validate([
             'title'=> 'required',
-            'description'=> 'required'
+            'description'=> 'required',
+            'category'=> 'required',
+            'status'=>'required'
         ]);
 
         $slug = Str::slug($request->title,'-');
@@ -51,7 +53,9 @@ class ServiceController extends Controller
             $service = new Service();
             $service->title = $request->title;
             $service->slug = $slug;
+            $service->category = $request->category;
             $service->description = $request->description;
+            $service->status = $request->status;
             $service->filename = $name;
             $save_service = $service->save();
             if($save_service){
@@ -99,6 +103,14 @@ class ServiceController extends Controller
      */
     public function update(Request $request, $id)
     {
+        
+        $request->validate([
+            'title'=> 'required',
+            'description'=> 'required',
+            'category'=> 'required',
+            'status'=>'required'
+        ]);
+
         $slug = Str::slug($request->title,'-');
         if($request->hasfile('image')){
             $name = $request->file('image')->getClientOriginalName();
@@ -110,7 +122,9 @@ class ServiceController extends Controller
                }
             $service->title = $request->title;
             $service->slug = $slug;
+            $service->category = $request->category;
             $service->description = $request->description;
+            $service->status = $request->status;
             $service->filename = $name;
             $save_service = $service->save();
             if($save_service){
@@ -123,8 +137,10 @@ class ServiceController extends Controller
             $filename = $service->filename;
             $service->title = $request->title;
             $service->slug = $slug;
+            $service->category = $request->category;
             $service->description = $request->description;
             $service->filename = $filename;
+            $service->status = $request->status;
             $save_service = $service->save();
             if($save_service){
                 return redirect()->route('admin.service.list')->with('success','service has been updated successfully.');

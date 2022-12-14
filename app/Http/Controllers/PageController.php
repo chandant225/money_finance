@@ -9,8 +9,9 @@ use App\Models\Service;
 class PageController extends Controller
 {
     public function homePage () {
-        $services = Service::all();
-        return view('client.index')->with(['services' => $services]);
+        $services = Service::where('status','=','active')->where('category','=','service')->get();
+        $about = Service::where('category','about')->first();
+        return view('client.index')->with(['services' => $services,'about' => $about]);
     }
 
     public function dashboard() {

@@ -2,7 +2,7 @@
     <div class="container-fluid bg-primary text-secondary p-5">
         <div class="row g-5">
             <div class="col-12 text-center">
-                <h1 class="display-5 mb-4">Stay Update!!!</h1>
+                <h1 class="mb-4">Stay Update!!!</h1>
                 <form class="mx-auto" style="max-width: 600px;">
                     <div class="input-group">
                         <input type="text" class="form-control border-white p-3" placeholder="Your Email">
@@ -52,6 +52,6 @@
         </div>
     </div>
     <div class="container-fluid bg-dark text-secondary text-center border-top py-4 px-5" style="border-color: rgba(256, 256, 256, .1) !important;">
-        <p class="m-0">&copy; <a class="text-secondary border-bottom" href="#">The Tax Adviser</a>. All Rights Reserved. Designed by <a class="text-secondary border-bottom" href="https://htmlcodex.com">OUT-OF-BOX-DESIGN</a></p>
+        <p class="m-0">&copy; <a class="text-secondary border-bottom" href="#">The Tax Adviser</a>. All Rights Reserved. Developed by <a class="text-secondary border-bottom" href="https://outofboxdesign.com">outOfBoxDesign</a></p>
     </div>
     <!-- Footer End -->

@@ -34,6 +34,20 @@
                             </span>
                         </div>
                         <div class="form-group">
+                            <label for="category">Category</label>
+                            <select name="category" id="" class="form-control">
+                                <option value="" selected>choose category</option>
+                                <option value="service">Service</option>
+                                <option value="blogs">Blogs</option>
+                                <option value="about">About-us</option>
+                            </select>
+                            <span class="text-danger">
+                                @error('category')
+                                    {{ $message }}
+                                @enderror
+                            </span>
+                        </div>
+                        <div class="form-group">
                             <label for="description">Description</label>
                             <textarea class="form-control" id="description" placeholder="Enter the Description" name="description"></textarea>
                             <span class="text-danger">
@@ -50,9 +64,21 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="form-group">
+                            <label for="status">Status</label>
+                            <select name="status" id="" class="form-control">
+                                <option value="active">Active</option>
+                                <option value="inactive">Inactive</option>
+                            </select>
+                            <span class="text-danger">
+                                @error('status')
+                                    {{ $message }}
+                                @enderror
+                            </span>
+                        </div>
                     </div>
-                    <!-- /.card-body -->
 
+                    <!-- /.card-body -->
                     <div class="card-footer">
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </div>

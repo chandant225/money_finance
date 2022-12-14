@@ -35,6 +35,19 @@
                             </span>
                         </div>
                         <div class="form-group">
+                            <label for="category">Category</label>
+                            <select name="category" id="" class="form-control">
+                                <option  {{$service->category === 'service' ? 'selected' : null}} value="service">Service</option>
+                                <option  {{$service->category === 'blogs' ? 'selected' : null}} value="blogs">Blogs</option>
+                                <option  {{$service->category === 'about' ? 'selected' : null}} value="about">About-us</option>
+                            </select>
+                            <span class="text-danger">
+                                @error('category')
+                                    {{ $message }}
+                                @enderror
+                            </span>
+                        </div>
+                        <div class="form-group">
                             <label for="description">Description</label>
                             <textarea class="form-control" rows="3" name="description" placeholder="Enter description">{{ $service->description }}</textarea>
                             <span class="text-danger">
@@ -53,7 +66,18 @@
                             <img src="{{ env('APP_URL') . 'uploads/service/' . $service->filename }}"
                                 alt="{{ $service->title }}" class="w-100 img-responsive" />
                         </div>
-
+                        <div class="form-group">
+                            <label for="status">Status</label>
+                            <select name="status" id="" class="form-control">
+                                <option {{$service->status === 'active' ? 'selected' : null}} value="active">Active</option>
+                                <option {{$service->status === 'inactive' ? 'selected' : null}} value="inactive">Inactive</option>
+                            </select>
+                            <span class="text-danger">
+                                @error('status')
+                                    {{ $message }}
+                                @enderror
+                            </span>
+                        </div>
                     </div>
                     <!-- /.card-body -->
 

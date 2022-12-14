@@ -413,7 +413,7 @@ progress {
 }
 @media (min-width: 1200px) {
     .display-1 {
-        font-size: 5rem;
+        font-size: 3rem;
     }
 }
 .display-2 {
@@ -6778,7 +6778,7 @@ fieldset:disabled .btn {
     word-break: break-word !important;
 }
 .text-primary {
-    color: #f3525a !important;
+    color: #0053a1 !important;
 }
 .text-secondary {
     color: #f6f6f6 !important;
