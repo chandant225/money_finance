@@ -39,9 +39,64 @@
        </div>
        <!-- Carousel End -->
 
+       <!-- why choose us -->
+       <section class="container">
+           <div class="row">
+               <div class="col-lg-6 d-flex flex-column justify-content-center">
+                   <h3 class="text-primary fw-bold" style="letter-spacing: 3px">WHY CHOOSE US</h3>
+                   <h5>1,50+ Business Company Doing Bookkeeping with us.</h5>
+                   <p>The Tax Adviser is a team of highly trained Chartered Accountants based in sydney. We provide a
+                       comprehensive range of accounting and taxation services.<br></br>
+                       At THE TAX ADVISER, we offer a complete range of accounting and taxation services.
+                   </p>
+               </div>
+               <div class="col-lg-6">
+                   <img src="{{ asset('img/why-choose-us.png') }}" alt="why choose us">
+               </div>
+           </div>
+           <div class="row g-0 bg-success">
+               <div class="col">
+                   <img src="{{ asset('img/tax-returns.png') }}" alt="">
+               </div>
+               <div class="col">
+                   <img src="{{ asset('img/accounting.png') }}" alt="">
+               </div>
+               <div class="col">
+                   <img src="{{ asset('img/consulting.png') }}" alt="">
+               </div>
+               <div class="col">
+                   <img src="{{ asset('img/book-keeping.png') }}" alt="" class="h-100">
+               </div>
+               <div class="col">
+                   <img src="{{ asset('img/bussiness-setup.png') }}" alt="">
+               </div>
+           </div>
+       </section>
+       <!-- why choose us end -->
+
+       <!-- why choose us -->
+       <section class="mt-5 pt-3">
+           <div class="row">
+               <div class="col-lg-6">
+                   <img src="{{ asset('img/tax.png') }}" alt="why choose us" class="w-100">
+               </div>
+               <div class="col-lg-6 d-flex flex-column justify-content-center pr-3">
+                   <h3 class="text-primary fw-bold" style="letter-spacing: 3px">INDIVIDUAL TAX RETURNS - FROM COMFORT OF
+                       YOUR PLACE</h3>
+                   <h5>Whether it's a basic tax return or complicated tax return, our professional accountants can assis you
+                       in preparation of your tax return. We will provide you with annual tax lodgment and continuing tax
+                       support.</h5>
+                   <p>The Tax Adviser is a team of highly trained Chartered Accountants based in sydney. We provide a
+                       comprehensive range of accounting and taxation services.<br></br>
+                       At THE TAX ADVISER, we offer a complete range of accounting and taxation services.
+                   </p>
+               </div>
+           </div>
+       </section>
+       <!-- why choose us end -->
 
        <!-- About Start -->
-       <div class="container bg-secondary p-0">
+       {{-- <div class="container bg-secondary p-0">
            <center>
                <h1 class="py-4">Welcome To <span class="text-success">THE TAX ADVISER</span></h1>
            </center>
@@ -62,12 +117,12 @@
                    <h3>no about us data.</h3>
                @endif
            </div>
-       </div>
+       </div> --}}
        <!-- About End -->
 
 
        <!-- Services Start -->
-       <div class="container pt-6 px-5">
+       <div  style="background-color: #f4f4f4" class="pt-6">
            <div class="text-center mx-auto mb-5" style="max-width: 600px;">
                <h3 class="display-5 mb-0">What We Offer</h3>
                <hr class="w-25 mx-auto bg-primary">
@@ -86,18 +141,17 @@
                                        src="{{ env('APP_URL') . 'uploads/service/' . $service->filename }}"
                                        alt="{{ $service->title }}" class="card-img-top">
                                </div>
-                               <div class="col-lg-6">
-                                   <h3 class="text-primary fs-bold">{{ $service->title }}</h3>
+                               <div style="padding: 0 4rem;" class="col-lg-6">
+                                   <h3 class="text-primary fw-bold" style="letter-spacing: 3px;text-transform: uppercase;">
+                                       {{ $service->title }}</h3>
                                    <p class="card-text"> {!! $service->description !!}</p>
-                                   <a href="{{ route('serviceDetails', ['slug' => $service->slug]) }}"
-                                       class="btn btn-success ">Read More</a>
                                </div>
                            @else
-                               <div class="col-lg-6">
-                                   <h3 class="text-primary fs-bold">{{ $service->title }}</h3>
+                               <div style="padding: 0 4rem;" class="col-lg-6">
+                                   <h3 class="text-primary fw-bold"
+                                       style="letter-spacing: 3px; text-transform: uppercase;">
+                                       {{ $service->title }}</h3>
                                    <p class="card-text"> {!! $service->description !!}</p>
-                                   <a href="{{ route('serviceDetails', ['slug' => $service->slug]) }}"
-                                       class="btn btn-success ">Read More</a>
                                </div>
                                <div class="col-lg-6">
                                    <img style="object-fit: cover;height:100%;"
@@ -120,19 +174,18 @@
                <h3 class="display-5 mb-0">Why Choose Us!!!</h3>
                <hr class="w-25 mx-auto bg-primary">
            </div>
-           <div class="row g-5">
+           <div style="text-align: justify" class="row g-5">
                <div class="col-lg-4">
-                   <div class="row g-5">
+                   <div style="text-align: justify" class="row g-5">
                        <div class="col-12 d-flex flex-column justify-content-center align-items-center">
                            <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3"
                                style="width: 60px; height: 60px;">
                                <img src="/img/itax.jpg" class="icon-img" alt="">
                            </div>
-                           <h3>One Stop Solutions</h3>
+                           <h5 class="fw-bold">INDIVIDUAL TAXES</h5>
                            <p class="mb-0">
-                               We at The Tax Adviser, provide accounting, financial reporting, ATO obligation support, SMSF
-                               administration and all the financial expertise required in today’s complex business
-                               environment.
+                               Whether it's a basic tax return or complicated tax return, our professional accountants can
+                               assist you in preparation of your tax return. We will provide you with annual tax lodgment..
                            </p>
                        </div>
                        <div class="col-12 d-flex flex-column justify-content-center align-items-center">
@@ -140,10 +193,10 @@
                                style="width: 60px; height: 60px;">
                                <img src="/img/businnes.jpg" class="icon-img" alt="">
                            </div>
-                           <h3>Flexibility</h3>
-                           <p class="mb-0">Having a flexible approach by offering face-to-face and online meetings allows
-                               us to accommodate what works best for you.We are happy to do home, office visits or catch-ups
-                               after hours. We’ll always be on time and return your calls the same day.</p>
+                           <h5 class="fw-bold">BUSINESS TAXES</h5>
+                           <p class="mb-0">If you own a business, tax compliance can be time-consuming and complicated.
+                               With The Tax Adviser, You can focus on your business and
+                               don't have to worry about your tax obligations.</p>
                        </div>
 
                    </div>
@@ -160,29 +213,114 @@
                                style="width: 60px; height: 60px;">
                                <img src="/img/ibook.jpg" class="icon-img" alt="">
                            </div>
-                           <h3>Ongoing Support</h3>
-                           <p class="mb-0">Client partnership approach and consultation to clients throughout the year
-                               rather than year end work. Our consultants are available for discussion with minimal
-                               turnaround time.</p>
+                           <h5 class="fw-bold">BOOKKEEPING</h5>
+                           <p class="mb-0">
+
+                               Sometime bookkeeping can be a time consuming and Stressful. Outsourcing can be a better
+                               option. This will provide you and your team more time to do the meaningful work you're
+                               passionate about.</p>
                        </div>
                        <div class="col-12 d-flex flex-column justify-content-center align-items-center">
                            <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3"
                                style="width: 60px; height: 60px;">
                                <img src="/img/cost.jpg" class="icon-img" alt="">
                            </div>
-                           <h3>Cost Effective</h3>
-                           <p class="mb-0">We offer quality services within the budget. Our complete bookkeeping,
-                               reporting and finance management solution will cost you less than remuneration of an
-                               accountant.</p>
+                           <h5 class="fw-bold">PAYROLL SERVICES</h5>
+                           <p class="mb-0">
+                               Businesses have an obligation to manage the payments of wages to their employees and as a
+                               business grows this can become a complicated and time consuming process.</p>
                        </div>
                    </div>
                </div>
            </div>
+           <center class="mt-4">
+               <div class="col-lg-4 d-flex flex-column justify-content-center align-items-center">
+                   <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3"
+                       style="width: 60px; height: 60px;">
+                       <img src="/img/cost.jpg" class="icon-img" alt="">
+                   </div>
+                   <h5 class="fw-bold">CONSULTING SERVICES</h5>
+                   <p class="mb-0">
+                       if you are starting a small business you will need to work out which type of business
+                       structure to use.</p>
+               </div>
+           </center>
        </div>
 
+       <section>
+           <div class="book-consultation">
+               <img src="{{ asset('img/book-conslt.jpg') }}" alt="book-conslt.jpg">
+               <div class="overlay"></div>
+               <div class="text-wrapper">
+                   <center>
+                       <h2 style="letter-spacing: 3px" class="text-success">STILL CONFUSED ABOUT OUR FEATURES?</h2>
+                       <h2 style="letter-spacing: 4px" class="text-white py-3">GET A CONSULTATION</h2>
+                       <button class="btn-sm btn-primary px-3">CONTACT NOW</button>
+                   </center>
+               </div>
+           </div>
+       </section>
 
+       <section>
+           <div class="container">
+               <h3 style="letter-spacing: 3px" class="text-primary fw-bold mt-4 pt-3">OUR AFFILIATIONS</h3>
+               <hr>
+               </hr>
+               <div class="d-flex">
+                   <div class="col">
+                       <img src="{{ asset('img/treva.png') }}" alt="treva.png">
+                   </div>
+                   <div class="col">
+                       <img src="{{ asset('img/treva2.png') }}" alt="treva.png">
+                   </div>
+                   <div class="col">
+                       <img src="{{ asset('img/circle.png') }}" alt="treva.png">
+                   </div>
+                   <div class="col">
+                       <img src="{{ asset('img/hexa.png') }}" alt="treva.png">
+                   </div>
+                   <div class="col">
+                       <img src="{{ asset('img/fox.png') }}" alt="treva.png">
+                   </div>
+               </div>
+           </div>
+       </section>
+
+       <section style="background-color: #f4f4f4" class="py-4">
+           <div class="container">
+               <h3 style="letter-spacing: 3px" class="text-primary fw-bold mt-4 pt-3">HAPPY CLIENTS</h3>
+               <p>Let's See What Are Our Happy Clients Are Saying About Us.</p>
+               <hr>
+               </hr>
+               <div class="row">
+                   <div class="col-lg-6 d-flex flex-column justify-content-center align-items-center border-end py-3">
+                       <img src="{{ asset('img/team-2.jpg') }}" alt="team-2" class="testimonial-img">
+                       <h5 class="pt-4 fw-bold">JOHN DOE</h5>
+                       <p>Ceo founder</p>
+                       <p class="px-4">It is a long established fact that a reader will be distracted by the readable
+                           content of a page
+                           when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
+                           distribution of letters,of using Lorem Ipsum is that it has a mor</p>
+                   </div>
+                   <div class="col-lg-6 d-flex flex-column justify-content-center align-items-center py-3">
+                       <img src="{{ asset('img/team-1.jpg') }}" alt="team-2" class="testimonial-img">
+                       <h5 class="pt-4 fw-bold">JOHN SNOW</h5>
+                       <p>Knight Watch</p>
+                       <p class="px-4">It is a long established fact that a reader will be distracted by the readable
+                           content of a page
+                           when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
+                           distribution of le</p>
+                   </div>
+                   <div class="col-lg-12 d-flex flex-column justify-content-center align-items-center py-3">
+                      <button class="btn btn-success px-3">VIEW ALL TESTIMONIALS</button>
+                   </div>
+
+               </div>
+       </section>
+
+       
        <!-- Quote Start -->
-       <div class="container bg-secondary px-0 mt-3">
+       {{-- <div class="container bg-secondary px-0 mt-3">
            <div class="row g-0">
                <div class="col-lg-6 py-6 px-5">
                    <h3 class="display-5 mb-4">Request A Free Quote</h3>
@@ -228,12 +366,12 @@
                    </div>
                </div>
            </div>
-       </div>
+       </div> --}}
        <!-- Quote End -->
 
 
        <!-- Team Start -->
-       <div id="team" class="container py-6 px-5">
+       {{-- <div id="team" class="container py-6 px-5">
            <div class="text-center mx-auto mb-5" style="max-width: 600px;">
                <h3 class="display-5 mb-0">Our Team Members</h3>
                <hr class="w-25 mx-auto bg-primary">
@@ -276,12 +414,12 @@
                    </div>
                </div>
            </div>
-       </div>
+       </div> --}}
        <!-- Team End -->
 
 
        <!-- Testimonial Start -->
-       <div class="container bg-secondary p-0">
+       {{-- <div class="container bg-secondary p-0">
            <div class="row g-0">
                <div class="col-lg-6" style="min-height: 500px;">
                    <div class="position-relative h-100">
@@ -318,6 +456,6 @@
                    </div>
                </div>
            </div>
-       </div>
+       </div> --}}
        <!-- Testimonial End -->
    @endsection

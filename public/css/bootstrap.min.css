@@ -177,7 +177,7 @@ strong {
 }
 small,
 .small {
-    font-size: 0.875em;
+    font-size: 12px;
 }
 mark,
 .mark {
@@ -2622,19 +2622,19 @@ fieldset:disabled .btn {
 }
 .btn-success {
     color: #fff;
-    background-color: #198754;
-    border-color: #198754;
+    background-color: #2eae01;
+    border-color: #2eae01;
 }
 .btn-success:hover {
     color: #fff;
-    background-color: #157347;
-    border-color: #146c43;
+    background-color: #2eae01;
+    border-color: #2eae01;
 }
 .btn-check:focus + .btn-success,
 .btn-success:focus {
     color: #fff;
-    background-color: #157347;
-    border-color: #146c43;
+    background-color: #2eae01;
+    border-color: #2eae01;
     box-shadow: 0 0 0 0.25rem rgba(60, 153, 110, 0.5);
 }
 .btn-check:checked + .btn-success,
@@ -6826,7 +6826,7 @@ fieldset:disabled .btn {
     background-color: #f6f6f6 !important;
 }
 .bg-success {
-    background-color: #198754 !important;
+    background-color: #2eae01 !important;
 }
 .bg-info {
     background-color: #0dcaf0 !important;

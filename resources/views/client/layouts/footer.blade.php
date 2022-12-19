@@ -1,57 +1,68 @@
-    <!-- Footer Start -->
-    <div class="container-fluid bg-primary text-secondary p-5">
-        <div class="row g-5">
-            <div class="col-12 text-center">
-                <h1 class="mb-4">Stay Update!!!</h1>
-                <form class="mx-auto" style="max-width: 600px;">
-                    <div class="input-group">
-                        <input type="text" class="form-control border-white p-3" placeholder="Your Email">
-                        <button class="btn btn-dark px-4">Sign Up</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid bg-dark text-secondary p-5">
-        <div class="row g-5">
-            <div class="col-lg-3 col-md-6">
-                <h3 class="text-white mb-4">Quick Links</h3>
-                <div class="d-flex flex-column justify-content-start">
-                    <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
-                    <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
-                    <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Our Services</a>
-                    <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Latest Blog Post</a>
-                    <a class="text-secondary" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <h3 class="text-white mb-4">Popular Links</h3>
-                <div class="d-flex flex-column justify-content-start">
-                    <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
-                    <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
-                    <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Our Services</a>
-                    <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Latest Blog Post</a>
-                    <a class="text-secondary" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <h3 class="text-white mb-4">Get In Touch</h3>
-                <p class="mb-2"><i class="bi bi-geo-alt text-primary me-2"></i>123 Street, New York, USA</p>
-                <p class="mb-2"><i class="bi bi-envelope-open text-primary me-2"></i>info@example.com</p>
-                <p class="mb-0"><i class="bi bi-telephone text-primary me-2"></i>+012 345 67890</p>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <h3 class="text-white mb-4">Follow Us</h3>
-                <div class="d-flex">
-                    <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="#"><i class="fab fa-twitter fw-normal"></i></a>
-                    <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="#"><i class="fab fa-facebook-f fw-normal"></i></a>
-                    <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="#"><i class="fab fa-linkedin-in fw-normal"></i></a>
-                    <a class="btn btn-lg btn-primary btn-lg-square rounded-circle" href="#"><i class="fab fa-instagram fw-normal"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid bg-dark text-secondary text-center border-top py-4 px-5" style="border-color: rgba(256, 256, 256, .1) !important;">
-        <p class="m-0">&copy; <a class="text-secondary border-bottom" href="#">The Tax Adviser</a>. All Rights Reserved. Developed by <a class="text-secondary border-bottom" href="https://outofboxdesign.com">outOfBoxDesign</a></p>
-    </div>
-    <!-- Footer End -->
+  <div class="bg-primary text-white py-5">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-3">
+                  <h5 style="letter-spacing: 3px" class="fw-bold text-white ms-2">EXPLORE</h5>
+                  <ul style="list-style: none">
+                      <li><a class="text-white" href="">Home</a></li>
+                      <li><a class="text-white" href="">Tax Returns</a></li>
+                      <li><a class="text-white" href="">Accounting</a></li>
+                      <li><a class="text-white" href="">Consulting Services</a></li>
+                      <li><a class="text-white" href="">Individual Tax Returns</a></li>
+                      <li><a class="text-white" href="">Testimonials</a></li>
+                      <li><a class="text-white" href="">Contact Us</a></li>
+                  </ul>
+              </div>
+              <div class="col-lg-6">
+                  <h5 style="letter-spacing: 3px" class="fw-bold text-white">WE REALLY LOVE OUR CLIENTS<br /> AMAZING
+                      FEEDBACK</h5>
+                  <form action="">
+                      <input type="text" placeholder="Enter Full Name" class="w-75 mt-2 p-2">
+                      <input type="text" placeholder="Enter Email Address" class="w-75 mt-2 p-2">
+                      <div class="d-flex justify-content-end w-75 mt-2">
+                          <button class="btn-sm btn-success float-right px-3">CONTINUE</button>
+                      </div>
+                  </form>
+              </div>
+              <div class="col-lg-3">
+                  <h5 style="letter-spacing:3px" class="fw-bold text-white">OFFICE ADDRESS</h5>
+                  <h5 class="text-white fw-bold mt-3">The Tax Adviser</h5>
+                  <small>Strathfield,New South Wales Australia</small>
+                  <small>0426816035</small> <br />
+                  <small>info@thetaxadviser.com.au</small>
+
+                  <h5 class="text-white fw-bold mt-3">Office Hour</h5>
+                  <small>Monday-Friday</small><br />
+                  <small>Time: 9:00am to 6:00pm</small>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="container text-gray py-3">
+      <div class="row">
+          <div class="col-lg-6">
+              <small>
+                  <p class="m-0">Copyright &copy; 2022 <a class="text-gray border-bottom" href="#">The Tax
+                          Adviser</a>.<br/> All
+                      Rights
+                      Reserved. Developed by <a class="text-gray border-bottom"
+                          href="https://outofboxdesign.com">outOfBoxDesign</a></p>
+              </small>
+          </div>
+          <div class="col-lg-6 d-flex justify-content-end">
+              <div class="d-inline-flex align-items-center">
+                  <a class="text-gray font-weight-bold py-2 px-1" href=""><small><i
+                              class="fa fa-envelope-open me-2"></i></small></a>
+                  <a class="text-gray font-weight-bold py-2 px-1" href=""><small><i
+                              class="fa fa-envelope-open me-2"></i></small></a>
+                  <a class="text-gray font-weight-bold py-2 px-1" href=""><small><i
+                              class="fa fa-envelope-open me-2"></i></small></a>
+                  <a class="text-gray font-weight-bold py-2 ps-1" href=""><small><i
+                              class="fa fa-envelope-open me-2"></i></small></a>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Footer End -->

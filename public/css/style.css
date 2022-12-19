@@ -1,8 +1,8 @@
 /********** Template CSS **********/
 :root {
-    --primary: #0655A1;
-    --secondary: #F6F6F6;
-    --light: #FFFFFF;
+    --primary: #0655a1;
+    --secondary: #f6f6f6;
+    --light: #ffffff;
     --dark: #152440;
 }
 
@@ -38,13 +38,13 @@ h6,
 }
 
 .btn {
-    font-family: 'Barlow', sans-serif;
+    font-family: "Barlow", sans-serif;
     font-weight: 600;
-    transition: .5s;
+    transition: 0.5s;
 }
 
 .btn-primary {
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
 .btn-square {
@@ -77,41 +77,28 @@ h6,
     bottom: 45px;
     z-index: 99;
 }
-
-.top-shape::before {
-    position: absolute;
-    content: "";
-    width: 35px;
-    height: 100%;
-    top: 0;
-    left: -17px;
-    background: var(--primary);
-    transform: skew(40deg);
+.brand-logo {
+    width: 80%;
 }
 
-.navbar-light .navbar-nav .nav-link {
-    font-family: 'Barlow', sans-serif;
-    padding: 35px 15px;
-    font-size: 18px;
-    text-transform: uppercase;
-    color: var(--dark);
-    outline: none;
-    transition: .5s;
+a.nav-item {
+    font-weight: 600;
+    font-size: 14px;
+    color: blue;
 }
 
-.sticky-top.navbar-light .navbar-nav .nav-link {
-    padding: 20px 15px;
-}
-
-.navbar-light .navbar-nav .nav-link:hover,
-.navbar-light .navbar-nav .nav-link.active {
-    color: var(--primary);
-}
-
-@media (max-width: 991.98px) {
-    .navbar-light .navbar-nav .nav-link  {
-        padding: 10px 0;
-    }
+#online-tax-btn {
+    border: none;
+    width: 27%;
+    font-size: 12px;
+    font-weight: 600;
+    background: #0655a1;
+    color: white;
+    padding: 0 0px;
+    height: 2rem;
+    margin: 0 0 0 30px;
+    text-align: center;
+    align-self: center;
 }
 
 .carousel-caption {
@@ -119,7 +106,7 @@ h6,
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(21, 36, 64, .7);
+    background: rgba(21, 36, 64, 0.7);
     z-index: 1;
 }
 
@@ -154,7 +141,7 @@ h6,
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .service-item::after {
@@ -166,8 +153,8 @@ h6,
     left: 0;
     background: var(--light);
     border-radius: 100% 100% 0 0;
-    box-shadow: 0px -10px 5px #EEEEEE;
-    transition: .5s;
+    box-shadow: 0px -10px 5px #eeeeee;
+    transition: 0.5s;
 }
 
 /* .service-item:hover::after {
@@ -175,7 +162,7 @@ h6,
 } */
 
 .service-item p {
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .service-item:hover p {
@@ -185,7 +172,7 @@ h6,
 .team-item img {
     transform: scale(1.15);
     margin-left: -30px;
-    transition: .5s;
+    transition: 0.5s;
 }
 
 .team-item:hover img {
@@ -194,7 +181,7 @@ h6,
 
 .team-item .team-text {
     left: -100%;
-    transition: .5s;
+    transition: 0.5s;
 }
 
 .team-item .team-text::after {
@@ -220,7 +207,7 @@ h6,
 }
 
 .testimonial-carousel .owl-nav .owl-prev,
-.testimonial-carousel .owl-nav .owl-next{
+.testimonial-carousel .owl-nav .owl-next {
     position: relative;
     margin: 0 5px;
     width: 45px;
@@ -228,11 +215,11 @@ h6,
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #FFFFFF;
+    color: #ffffff;
     background: var(--primary);
     font-size: 22px;
     border-radius: 45px;
-    transition: .5s;
+    transition: 0.5s;
 }
 
 .testimonial-carousel .owl-nav .owl-prev:hover,
@@ -246,7 +233,7 @@ h6,
 }
 
 .blog-item img {
-    transition: .5s;
+    transition: 0.5s;
 }
 
 .blog-item:hover img {
@@ -273,4 +260,38 @@ img.icon-img {
     width: 100%;
     height: 15rem;
     object-fit: cover;
+}
+.book-consultation{
+    position: relative;
+    margin-top: 2rem;
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+}
+
+.book-consultation img {
+    height: 20rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.book-consultation .overlay {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000a8;
+}
+
+.text-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+}
+
+img.testimonial-img{
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
 }

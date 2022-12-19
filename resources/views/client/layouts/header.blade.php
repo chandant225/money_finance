@@ -1,53 +1,69 @@
    <!-- Topbar Start -->
-   <div class="container-fluid bg-secondary ps-5 pe-0 d-none d-lg-block">
-       <div class="row gx-0">
-           <div class="col-md-6 text-center text-lg-start mb-2 mb-lg-0">
-               <div class="d-inline-flex align-items-center">
-                   <a class="text-body py-2 pe-3 border-end" href=""><small>FAQs</small></a>
-                   <a class="text-body py-2 px-3 border-end" href=""><small>Support</small></a>
-                   <a class="text-body py-2 px-3 border-end" href=""><small>Privacy</small></a>
-                   <a class="text-body py-2 px-3 border-end" href=""><small>Policy</small></a>
-                   <a class="text-body py-2 ps-3" href=""><small>Career</small></a>
-               </div>
-           </div>
-           <div class="col-md-6 text-center text-lg-end">
-               <div class="position-relative d-inline-flex align-items-center bg-primary text-white top-shape px-5">
-                   <div class="me-3 pe-3 border-end py-2">
-                       <p class="m-0"><i class="fa fa-envelope-open me-2"></i>info@example.com</p>
+   <div class="bg-primary">
+       <div class="container d-none d-lg-block">
+           <div class="row gx-0">
+               <div class="col-md-6 text-center text-lg-start ">
+                   <div class="d-inline-flex align-items-center">
+                       <a class="text-white font-weight-bold py-2 pe-3" href=""><small>HOME</small></a>
+                       <a class="text-white font-weight-bold py-2 px-3" href=""><small>NEWS</small></a>
+                       <a class="text-white font-weight-bold py-2 px-3" href=""><small>TESTIMONIALS</small></a>
+                       <a class="text-white font-weight-bold py-2 px-3" href=""><small>BLOGS</small></a>
+                       <a class="text-white font-weight-bold py-2 ps-3" href=""><small>CONTACT</small></a>
+                       <div class="me-3 pe-3 py-2">
+                           <a class="text-white font-weight-bold py-2 ps-3" href=""><small><i
+                                       class="fa fa-envelope-open me-2"></i>info@example.com</small></a>
+                       </div>
                    </div>
-                   <div class="py-2">
-                       <p class="m-0"><i class="fa fa-phone-alt me-2"></i>+012 345 6789</p>
+               </div>
+               <div class="col-md-6 text-center d-flex justify-content-end">
+                   <div class="d-inline-flex align-items-center">
+                       <a class="text-white font-weight-bold py-2 px-1" href=""><small><i
+                                   class="fa fa-envelope-open me-2"></i></small></a>
+                       <a class="text-white font-weight-bold py-2 px-1" href=""><small><i
+                                   class="fa fa-envelope-open me-2"></i></small></a>
+                       <a class="text-white font-weight-bold py-2 px-1" href=""><small><i
+                                   class="fa fa-envelope-open me-2"></i></small></a>
+                       <a class="text-white font-weight-bold py-2 ps-1" href=""><small><i
+                                   class="fa fa-envelope-open me-2"></i></small></a>
+                   </div>
+                   <div class="py-2" style="">
+                       <a class="text-white font-weight-bold py-2 ps-3 bg-success px-3" href=""><small> BOOK A
+                               FREE
+                               CONSULTATION</small></a>
                    </div>
                </div>
            </div>
        </div>
+       <!-- Topbar End -->
    </div>
-   <!-- Topbar End -->
 
 
-   <!-- Navbar Start -->
-   <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm px-5">
-       <a href="{{ route('home') }}" class="navbar-brand p-0">
-           <img src="{{ asset('logo.png') }}" class="w-25" alt="logo.png" />
-       </a>
-       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-           <span class="navbar-toggler-icon"></span>
-       </button>
-       <div class="collapse navbar-collapse" id="navbarCollapse">
-           <div class="navbar-nav ms-auto  me-n3">
-               <a href="{{ route('home') }}" class="nav-item nav-link active">Home</a>
-               <a href="{{ route('about') }}" class="nav-item nav-link">About</a>
-               <a href="{{ route('services') }}" class="nav-item nav-link">Service</a>
-               @foreach($menuItems as $item)
-               <a href="{{ route('serviceDetails', ['slug' => $item->slug])}}" class="nav-item nav-link">{{$item->title}}</a>
-               @endforeach
+   <div class="container">
+       <!-- Navbar Start -->
+       <nav class="row">
+           <div class="col-lg-3">
+               <a href="{{ route('home') }}" class="navbar-brand p-0">
+                   <img src="{{ asset('logo.png') }}" class="brand-logo" alt="logo.png" />
+               </a>
            </div>
-       </div>
-       <button type="button" class="ms-3 btn btn-primary w-50 px-3" data-bs-toggle="modal"
-           data-bs-target="#exampleModal">Book an
-           appointment</button>
-   </nav>
-   <!-- Navbar End -->
+           <div class="col-lg-9 d-flex justify-content-start">
+               <div class="d-flex justify-content-center align-items-center gap-3">
+                   <a href="{{ route('home') }}" class="nav-item active">TAX RETURNS</a>
+                   <a href="{{ route('about') }}" class="nav-item">ACCOUNTING</a>
+                   <a href="{{ route('services') }}" class="nav-item">CONSULTING SERVICES</a>
+                   <a href="{{ route('services') }}" class="nav-item">SMSFS</a>
+                   <a href="{{ route('services') }}" class="nav-item">ABOUT US</a>
+                   {{-- @foreach ($menuItems as $item)
+                       <a href="{{ route('serviceDetails', ['slug' => $item->slug]) }}"
+                           class="nav-item">{{ $item->title }}</a>
+                   @endforeach --}}
+               </div>
+               <button id="online-tax-btn" type="button" class="" data-bs-toggle="modal"
+               data-bs-target="#exampleModal">INDIVIDUAL TAX - ONLINE FORM</button>
+           </div>
+       </nav>
+   </div>
+
 
    <!-- Modal -->
    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -57,7 +73,7 @@
                    <h5 class="modal-title" id="exampleModalLabel">Book an appointment</h5>
                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                </div>
-               <div class="modal-body">
+               <div class="modal-white">
                    <form method="post" action="{{ route('contact.mail') }}">
                        @csrf
                        <div class="row g-3">
