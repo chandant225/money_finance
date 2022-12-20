@@ -44,7 +44,7 @@
           <div class="col-lg-6">
               <small>
                   <p class="m-0">Copyright &copy; 2022 <a class="text-gray border-bottom" href="#">The Tax
-                          Adviser</a>.<br/> All
+                          Adviser</a>.<br />All
                       Rights
                       Reserved. Developed by <a class="text-gray border-bottom"
                           href="https://outofboxdesign.com">outOfBoxDesign</a></p>
@@ -53,13 +53,13 @@
           <div class="col-lg-6 d-flex justify-content-end">
               <div class="d-inline-flex align-items-center">
                   <a class="text-gray font-weight-bold py-2 px-1" href=""><small><i
-                              class="fa fa-envelope-open me-2"></i></small></a>
+                              class="fab fa-youtube me-2"></i></small></a>
                   <a class="text-gray font-weight-bold py-2 px-1" href=""><small><i
-                              class="fa fa-envelope-open me-2"></i></small></a>
+                              class="fab fa-instagram me-2"></i></small></a>
                   <a class="text-gray font-weight-bold py-2 px-1" href=""><small><i
-                              class="fa fa-envelope-open me-2"></i></small></a>
+                              class="fab fa-whatsapp me-2"></i></small></a>
                   <a class="text-gray font-weight-bold py-2 ps-1" href=""><small><i
-                              class="fa fa-envelope-open me-2"></i></small></a>
+                              class="fab fa-facebook me-2"></i></small></a>
               </div>
           </div>
       </div>

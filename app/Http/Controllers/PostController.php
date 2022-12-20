@@ -3,11 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Service;
+use App\Models\Post;
 use File;
 use Illuminate\Support\Str;
 
-class ServiceController extends Controller
+class PostController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +16,8 @@ class ServiceController extends Controller
      */
     public function index()
     {
-        $services = Service::orderBy('created_at', 'desc')->get();
-        return view('admin.service.list',compact('services'));
+        $posts = Post::orderBy('created_at', 'desc')->get();
+        return view('admin.post.list',compact('posts'));
     }
 
     /**
@@ -27,7 +27,7 @@ class ServiceController extends Controller
      */
     public function create()
     {
-        return  view('admin.service.add');
+        return  view('admin.post.add');
     }
 
     /**
@@ -50,18 +50,18 @@ class ServiceController extends Controller
 
         if($request->hasfile('image')){
             $name = $request->file('image')->getClientOriginalName();
-            $request->file('image')->move(public_path(). '/uploads/service',$name);
-            $service = new Service();
-            $service->title = $request->title;
-            $service->slug = $slug;
-            $service->category = $request->category;
-            $service->description = $request->description;
-            $service->status = $request->status;
-            $service->menu_list = $request->menu_list;
-            $service->filename = $name;
-            $save_service = $service->save();
-            if($save_service){
-                return redirect()->route('admin.service.list')->with('success','service has been added successfully.');
+            $request->file('image')->move(public_path(). '/uploads/post',$name);
+            $post = new Post();
+            $post->title = $request->title;
+            $post->slug = $slug;
+            $post->category = $request->category;
+            $post->description = $request->description;
+            $post->status = $request->status;
+            $post->menu_list = $request->menu_list;
+            $post->filename = $name;
+            $save_post = $post->save();
+            if($save_post){
+                return redirect()->route('admin.post.list')->with('success','post has been added successfully.');
             }else {
                 return back()->with('error','something went wrong');
             }
@@ -78,9 +78,9 @@ class ServiceController extends Controller
      */
     public function show($slug)
     {
-       $services = Service::orderBy('updated_at','desc')->get();
-       $service = Service::where('slug', $slug)->first();
-       return view('client.service-details')->with(['services' => $services, 'service' => $service]);
+       $posts = Post::orderBy('updated_at','desc')->get();
+       $post = Post::where('slug', $slug)->first();
+       return view('client.post-details')->with(['posts' => $posts, 'post' => $post]);
     }
 
     /**
@@ -91,9 +91,9 @@ class ServiceController extends Controller
      */
     public function edit($id)
     {
-        // $service = Service::where("id",$id)->first();
-        $service = Service::find($id);
-        return view('admin.service.edit',compact('service'));
+        // $post = Post::where("id",$id)->first();
+        $post = Post::find($id);
+        return view('admin.post.edit',compact('post'));
     }
 
     /**
@@ -116,38 +116,38 @@ class ServiceController extends Controller
         $slug = Str::slug($request->title,'-');
         if($request->hasfile('image')){
             $name = $request->file('image')->getClientOriginalName();
-            $request->file('image')->move(public_path(). '/uploads/service',$name);
-            $service = Service::find($id);
-            $filename = $service->filename;
-            if (File::exists(public_path('uploads/service/'.$filename))) {
-               File::delete(public_path('uploads/service/'.$filename));
+            $request->file('image')->move(public_path(). '/uploads/post',$name);
+            $post = Post::find($id);
+            $filename = $post->filename;
+            if (File::exists(public_path('uploads/post/'.$filename))) {
+               File::delete(public_path('uploads/post/'.$filename));
                }
-            $service->title = $request->title;
-            $service->slug = $slug;
-            $service->category = $request->category;
-            $service->description = $request->description;
-            $service->status = $request->status;
-            $service->menu_list = $request->menu_list;
-            $service->filename = $name;
-            $save_service = $service->save();
-            if($save_service){
-                return redirect()->route('admin.service.list')->with('success','service has been updated successfully.');
+            $post->title = $request->title;
+            $post->slug = $slug;
+            $post->category = $request->category;
+            $post->description = $request->description;
+            $post->status = $request->status;
+            $post->menu_list = $request->menu_list;
+            $post->filename = $name;
+            $save_post = $post->save();
+            if($save_post){
+                return redirect()->route('admin.post.list')->with('success','post has been updated successfully.');
             }else {
                 return back()->with('error','something went wrong');
             }
         }else {
-            $service = Service::find($id);
-            $filename = $service->filename;
-            $service->title = $request->title;
-            $service->slug = $slug;
-            $service->category = $request->category;
-            $service->description = $request->description;
-            $service->filename = $filename;
-            $service->status = $request->status;
-            $service->menu_list = $request->menu_list;
-            $save_service = $service->save();
-            if($save_service){
-                return redirect()->route('admin.service.list')->with('success','service has been updated successfully.');
+            $post = Post::find($id);
+            $filename = $post->filename;
+            $post->title = $request->title;
+            $post->slug = $slug;
+            $post->category = $request->category;
+            $post->description = $request->description;
+            $post->filename = $filename;
+            $post->status = $request->status;
+            $post->menu_list = $request->menu_list;
+            $save_post = $post->save();
+            if($save_post){
+                return redirect()->route('admin.post.list')->with('success','post has been updated successfully.');
             }else {
                 return back()->with('error','something went wrong');
             }
@@ -162,16 +162,16 @@ class ServiceController extends Controller
      */
     public function destroy($id)
     {
-        $service = Service::find($id);
-        $filename = $service->filename;
-     if (File::exists(public_path('uploads/service/'.$filename))) {
-        File::delete(public_path('uploads/service/'.$filename));
+        $post = Post::find($id);
+        $filename = $post->filename;
+     if (File::exists(public_path('uploads/post/'.$filename))) {
+        File::delete(public_path('uploads/post/'.$filename));
       }
-        $service->delete();
-        return redirect()->route('admin.service.list')->with('success','service has been deleted successfully.');
+        $post->delete();
+        return redirect()->route('admin.post.list')->with('success','post has been deleted successfully.');
     }
 
-    public function serviceEditorUpload (Request $request) 
+    public function postEditorUpload (Request $request) 
     {
           if($request->hasFile('upload')) {
             //get filename with extension
@@ -187,10 +187,10 @@ class ServiceController extends Controller
             $filenametostore = $filename.'_'.time().'.'.$extension;
 
             //Upload File
-            $request->file('upload')->move(public_path().'/uploads/editor/service', $filenametostore);
+            $request->file('upload')->move(public_path().'/uploads/editor/post', $filenametostore);
 
             $CKEditorFuncNum = $request->input('CKEditorFuncNum');
-            $url = asset('uploads/editor/service/'.$filenametostore);
+            $url = asset('uploads/editor/post/'.$filenametostore);
             $message = 'File uploaded successfully';
             $result = "<script>window.parent.CKEDITOR.tools.callFunction($CKEditorFuncNum, '$url', '$message')</script>";
 

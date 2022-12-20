@@ -3,7 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use App\Models\Service;
+use App\Models\Post;
 class MenuItemProvider extends ServiceProvider
 {
     /**
@@ -26,7 +26,7 @@ class MenuItemProvider extends ServiceProvider
         view()->composer(
             'client.layouts.header', 
             function ($view) {
-                $view->with('menuItems', Service::where('menu_list', 'true')->get());
+                $view->with('menuItems', Post::where('menu_list', 'true')->get());
             }
         );
     }

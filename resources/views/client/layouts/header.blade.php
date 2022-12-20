@@ -11,20 +11,20 @@
                        <a class="text-white font-weight-bold py-2 ps-3" href=""><small>CONTACT</small></a>
                        <div class="me-3 pe-3 py-2">
                            <a class="text-white font-weight-bold py-2 ps-3" href=""><small><i
-                                       class="fa fa-envelope-open me-2"></i>info@example.com</small></a>
+                                       class="fa fa-envelope me-2"></i>info@example.com</small></a>
                        </div>
                    </div>
                </div>
                <div class="col-md-6 text-center d-flex justify-content-end">
                    <div class="d-inline-flex align-items-center">
                        <a class="text-white font-weight-bold py-2 px-1" href=""><small><i
-                                   class="fa fa-envelope-open me-2"></i></small></a>
+                                   class="fab fa-youtube me-2"></i></small></a>
                        <a class="text-white font-weight-bold py-2 px-1" href=""><small><i
-                                   class="fa fa-envelope-open me-2"></i></small></a>
+                                   class="fab fa-instagram me-2"></i></small></a>
                        <a class="text-white font-weight-bold py-2 px-1" href=""><small><i
-                                   class="fa fa-envelope-open me-2"></i></small></a>
+                                   class="fab fa-whatsapp me-2"></i></small></a>
                        <a class="text-white font-weight-bold py-2 ps-1" href=""><small><i
-                                   class="fa fa-envelope-open me-2"></i></small></a>
+                                   class="fab fa-facebook me-2"></i></small></a>
                    </div>
                    <div class="py-2" style="">
                        <a class="text-white font-weight-bold py-2 ps-3 bg-success px-3" href=""><small> BOOK A
@@ -37,33 +37,33 @@
        <!-- Topbar End -->
    </div>
 
-
-   <div class="container">
-       <!-- Navbar Start -->
-       <nav class="row">
-           <div class="col-lg-3">
-               <a href="{{ route('home') }}" class="navbar-brand p-0">
-                   <img src="{{ asset('logo.png') }}" class="brand-logo" alt="logo.png" />
-               </a>
-           </div>
-           <div class="col-lg-9 d-flex justify-content-start">
-               <div class="d-flex justify-content-center align-items-center gap-3">
-                   <a href="{{ route('home') }}" class="nav-item active">TAX RETURNS</a>
-                   <a href="{{ route('about') }}" class="nav-item">ACCOUNTING</a>
-                   <a href="{{ route('services') }}" class="nav-item">CONSULTING SERVICES</a>
-                   <a href="{{ route('services') }}" class="nav-item">SMSFS</a>
-                   <a href="{{ route('services') }}" class="nav-item">ABOUT US</a>
-                   {{-- @foreach ($menuItems as $item)
-                       <a href="{{ route('serviceDetails', ['slug' => $item->slug]) }}"
-                           class="nav-item">{{ $item->title }}</a>
-                   @endforeach --}}
+   <header id="navbar">
+       <div class="container">
+           <!-- Navbar Start -->
+           <nav class="row">
+               <div class="col-lg-3">
+                   <a href="{{ route('home') }}" class="navbar-brand p-0">
+                       <img src="{{ asset('logo.png') }}" class="brand-logo" alt="logo.png" />
+                   </a>
                </div>
-               <button id="online-tax-btn" type="button" class="" data-bs-toggle="modal"
-               data-bs-target="#exampleModal">INDIVIDUAL TAX - ONLINE FORM</button>
-           </div>
-       </nav>
-   </div>
-
+               <div class="col-lg-9 d-flex justify-content-start">
+                   <div class="d-flex justify-content-center align-items-center gap-3">
+                       <a href="{{ route('home') }}" class="nav-item active">TAX RETURNS</a>
+                       <a href="{{ route('about') }}" class="nav-item">ACCOUNTING</a>
+                       <a href="{{ route('services') }}" class="nav-item">CONSULTING SERVICES</a>
+                       <a href="{{ route('services') }}" class="nav-item">SMSFS</a>
+                       <a href="{{ route('services') }}" class="nav-item">ABOUT US</a>
+                       {{-- @foreach ($menuItems as $item)
+                        <a href="{{ route('serviceDetails', ['slug' => $item->slug]) }}"
+                            class="nav-item">{{ $item->title }}</a>
+                    @endforeach --}}
+                   </div>
+                   <button id="online-tax-btn" type="button" class="" data-bs-toggle="modal"
+                       data-bs-target="#exampleModal">INDIVIDUAL TAX - ONLINE FORM</button>
+               </div>
+           </nav>
+       </div>
+   </header>
 
    <!-- Modal -->
    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -73,7 +73,7 @@
                    <h5 class="modal-title" id="exampleModalLabel">Book an appointment</h5>
                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                </div>
-               <div class="modal-white">
+               <div class="modal-white p-3">
                    <form method="post" action="{{ route('contact.mail') }}">
                        @csrf
                        <div class="row g-3">

@@ -1,11 +1,9 @@
 @extends('admin.layouts.master')
-
-
 @section('content')
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
         <center>
-            <h3 class="py-2">Add Service</h3>
+            <h3 class="py-2">Add Post</h3>
         </center>
         <!-- Main content -->
         <section class="content">
@@ -20,7 +18,7 @@
                         {{ Session::get('error') }}
                     </div>
                 @endif
-                <form method="post" action="{{ route('admin.service.store') }}" enctype="multipart/form-data">
+                <form method="post" action="{{ route('admin.post.store') }}" enctype="multipart/form-data">
                     @csrf
                     <div class="card-body">
                         <div class="form-group">
@@ -102,7 +100,7 @@
 @push('scripts')
     <script>
         CKEDITOR.replace('description', {
-            filebrowserUploadUrl: "{{ route('admin.service.editor.upload', ['_token' => csrf_token()]) }}",
+            filebrowserUploadUrl: "{{ route('admin.post.editor.upload', ['_token' => csrf_token()]) }}",
             filebrowserUploadMethod: 'form'
         })
     </script>

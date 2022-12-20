@@ -4,13 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
-use App\Models\Service;
+use App\Models\Post;
 
 class PageController extends Controller
 {
     public function homePage () {
-        $services = Service::where('status','=','active')->where('category','=','service')->get();
-        $about = Service::where('category','about')->first();
+        $services = Post::where('status','=','active')->where('category','=','service')->get();
+        $about = Post::where('category','about')->first();
         return view('client.index')->with(['services' => $services,'about' => $about]);
     }
 
@@ -19,14 +19,14 @@ class PageController extends Controller
      }
 
     public function servicePage() {
-         $services = Service::where('category','service')->get();
-         return view('client.service')->with(['services'=>$services]);
+         $services = Post::where('category','service')->get();
+         return view('client.post')->with(['services'=>$services]);
     }
 
     public function serviceDetails($slug){
-        $services = Service::where('category','service')->get();
-        $service = Service::where('slug',$slug)->first();
-        return view('client.detail',compact('service','services'));
+        $services = Post::where('category','service')->get();
+        $service = Post::where('slug',$slug)->first();
+        return view('client.detail',compact('services','service'));
     }
 
     public function aboutPage () {
