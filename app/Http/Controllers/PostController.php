@@ -56,8 +56,10 @@ class PostController extends Controller
             $post->slug = $slug;
             $post->category = $request->category;
             $post->description = $request->description;
+            $post->homepage_desc = $request->homepage_desc;
             $post->status = $request->status;
             $post->menu_list = $request->menu_list;
+            $post->menu_title = $request->menu_title;
             $post->filename = $name;
             $save_post = $post->save();
             if($save_post){
@@ -78,9 +80,9 @@ class PostController extends Controller
      */
     public function show($slug)
     {
-       $posts = Post::orderBy('updated_at','desc')->get();
+       $services = Post::where('category', 'service')->first();
        $post = Post::where('slug', $slug)->first();
-       return view('client.post-details')->with(['posts' => $posts, 'post' => $post]);
+       return view('client.post-details')->with(['services' => $services, 'post' => $post]);
     }
 
     /**
@@ -126,8 +128,10 @@ class PostController extends Controller
             $post->slug = $slug;
             $post->category = $request->category;
             $post->description = $request->description;
+            $post->homepage_desc= $request->homepage_desc;
             $post->status = $request->status;
             $post->menu_list = $request->menu_list;
+            $post->menu_title = $request->menu_title;
             $post->filename = $name;
             $save_post = $post->save();
             if($save_post){
@@ -142,9 +146,11 @@ class PostController extends Controller
             $post->slug = $slug;
             $post->category = $request->category;
             $post->description = $request->description;
+            $post->homepage_desc = $request->homepage_desc;
             $post->filename = $filename;
             $post->status = $request->status;
             $post->menu_list = $request->menu_list;
+            $post->menu_title = $request->menu_title;
             $save_post = $post->save();
             if($save_post){
                 return redirect()->route('admin.post.list')->with('success','post has been updated successfully.');

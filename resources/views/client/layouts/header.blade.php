@@ -48,15 +48,15 @@
                </div>
                <div class="col-lg-9 d-flex justify-content-start">
                    <div class="d-flex justify-content-center align-items-center gap-3">
-                       <a href="{{ route('home') }}" class="nav-item active">TAX RETURNS</a>
+                       {{-- <a href="{{ route('home') }}" class="nav-item active">TAX RETURNS</a>
                        <a href="{{ route('about') }}" class="nav-item">ACCOUNTING</a>
                        <a href="{{ route('services') }}" class="nav-item">CONSULTING SERVICES</a>
-                       <a href="{{ route('services') }}" class="nav-item">SMSFS</a>
-                       <a href="{{ route('services') }}" class="nav-item">ABOUT US</a>
-                       {{-- @foreach ($menuItems as $item)
-                        <a href="{{ route('serviceDetails', ['slug' => $item->slug]) }}"
-                            class="nav-item">{{ $item->title }}</a>
-                    @endforeach --}}
+                       <a href="{{ route('services') }}" class="nav-item">SMSFS</a> --}}
+
+                       @foreach ($menuItems as $item)
+                           <a href="{{ route('serviceDetails', ['slug' => $item->slug]) }}"
+                               class="nav-item">{{ $item->menu_title }}</a>
+                       @endforeach
                    </div>
                    <button id="online-tax-btn" type="button" class="" data-bs-toggle="modal"
                        data-bs-target="#exampleModal">INDIVIDUAL TAX - ONLINE FORM</button>

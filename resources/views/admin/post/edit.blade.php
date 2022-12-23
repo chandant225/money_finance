@@ -37,8 +37,8 @@
                         <div class="form-group">
                             <label for="category">Category</label>
                             <select name="category" id="" class="form-control">
-                                <option  {{$post->category === 'post' ? 'selected' : null}} value="post">Service</option>
-                                <option  {{$post->category === 'blogs' ? 'selected' : null}} value="blogs">Blogs</option>
+                                <option  {{$post->category === 'service' ? 'selected' : null}} value="service">Service</option>
+                                <option  {{$post->category === 'blog' ? 'selected' : null}} value="blog">Blogs</option>
                                 <option  {{$post->category === 'about' ? 'selected' : null}} value="about">About-us</option>
                             </select>
                             <span class="text-danger">
@@ -52,6 +52,15 @@
                             <textarea class="form-control" rows="3" name="description" placeholder="Enter description">{{ $post->description }}</textarea>
                             <span class="text-danger">
                                 @error('description')
+                                    {{ $message }}
+                                @enderror
+                            </span>
+                        </div>
+                        <div class="form-group">
+                            <label for="homepage_desc">Home Page Description</label>
+                            <textarea class="form-control" id="homepage_desc" placeholder="Enter the Home Page Description" name="homepage_desc">{{ $post->homepage_desc }}</textarea>
+                            <span class="text-danger">
+                                @error('homepage_desc')
                                     {{ $message }}
                                 @enderror
                             </span>
@@ -86,6 +95,16 @@
                             </select>
                             <span class="text-danger">
                                 @error('menu_list')
+                                    {{ $message }}
+                                @enderror
+                            </span>
+                        </div>
+                        <div class="form-group">
+                            <label for="menu_title">Menu Title</label>
+                            <input type="text" class="form-control" id="menu_title" placeholder="Enter menu title"
+                                name="menu_title" value="{{ $post->menu_title }}">
+                            <span class="text-danger">
+                                @error('menu_title')
                                     {{ $message }}
                                 @enderror
                             </span>

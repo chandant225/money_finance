@@ -56,21 +56,21 @@
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-copy"></i>
                                 <p>
-                                    Service
+                                    Posts
                                     <i class="fas fa-angle-left right"></i>
                                 </p>
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="{{route('admin.service.list')}}" class="nav-link">
+                                    <a href="{{route('admin.post.list')}}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>View Service</p>
+                                        <p>View post</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a  href="{{route('admin.service.add')}}" class="nav-link">
+                                    <a  href="{{route('admin.post.add')}}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Add Service</p>
+                                        <p>Add post</p>
                                     </a>
                                 </li>
                             </ul>

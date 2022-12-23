@@ -54,6 +54,17 @@
                                 @enderror
                             </span>
                         </div>
+
+                        <div class="form-group">
+                            <label for="homepage_desc">Home Page Description</label>
+                            <textarea class="form-control" id="homepage_desc" placeholder="Enter the Home Page Description" name="homepage_desc"></textarea>
+                            <span class="text-danger">
+                                @error('homepage_desc')
+                                    {{ $message }}
+                                @enderror
+                            </span>
+                        </div>
+
                         <div class="form-group">
                             <label for="exampleInputFile">File input</label>
                             <div class="input-group">
@@ -86,6 +97,16 @@
                                 @enderror
                             </span>
                         </div>
+                        <div class="form-group">
+                            <label for="menu_title">Menu Title</label>
+                            <input type="text" class="form-control" id="menu_title" placeholder="Enter menu title"
+                                name="menu_title" value="{{ old('menu_title') }}">
+                            <span class="text-danger">
+                                @error('menu_title')
+                                    {{ $message }}
+                                @enderror
+                            </span>
+                        </div>
                     </div>
 
                     <!-- /.card-body -->
@@ -100,6 +121,10 @@
 @push('scripts')
     <script>
         CKEDITOR.replace('description', {
+            filebrowserUploadUrl: "{{ route('admin.post.editor.upload', ['_token' => csrf_token()]) }}",
+            filebrowserUploadMethod: 'form'
+        })
+        CKEDITOR.replace('homepage_desc', {
             filebrowserUploadUrl: "{{ route('admin.post.editor.upload', ['_token' => csrf_token()]) }}",
             filebrowserUploadMethod: 'form'
         })

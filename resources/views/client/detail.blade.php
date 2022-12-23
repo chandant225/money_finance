@@ -21,7 +21,7 @@
                 <!-- Blog Detail Start -->
                 <div class="mb-5">
                     <h2 class="py-2">{{$service->title}}</h2>
-                    <img style="object-fit: cover;" src="{{ env('APP_URL') . 'uploads/service/' . $service->filename }}"
+                    <img style="object-fit: cover;" src="{{ env('APP_URL') . 'uploads/post/' . $service->filename }}"
                     alt="{{ $service->title }}" class="card-img-top">
                   <div class="py-4"> {!! $service->description !!}</div>
                 </div>

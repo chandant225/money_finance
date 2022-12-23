@@ -20,8 +20,10 @@ class CreatePostsTable extends Migration
             $table->string('category');
             $table->string('status');
             $table->longText('description');
+            $table->longText('homepage_desc');
             $table->string('filename');
             $table->string('menu_list')->nullable();
+            $table->string('menu_title')->nullable();
             $table->timestamps();
         });
     }
